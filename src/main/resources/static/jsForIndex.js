@@ -70,8 +70,8 @@ function buyTicket() {
         document.getElementById("telError").innerHTML = "";
     }
 
-    if (innEmail === '' || !isNaN(innEmail)) {
-        document.getElementById("emailError").innerHTML = "<font color=\"red\">"+'Cannot be a number, and must be filled'+"</font>";
+    if (innEmail === '' || !document.getElementById("email").value.match(/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)) {
+        document.getElementById("emailError").innerHTML = "<font color=\"red\">"+'Please enter a valid email'+"</font>";
         innEmail = "";
         document.getElementById("email").value = "";
     }
