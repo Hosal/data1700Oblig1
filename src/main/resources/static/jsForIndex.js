@@ -17,7 +17,7 @@ function buyTicket() {
     let innEmail = document.getElementById("email").value;
 
     if (innChoose === "") {
-        document.getElementById("chooseError").innerHTML = "<font color=\"red\">" + 'Choose a movie' + "</font>";
+        document.getElementById("chooseError").innerHTML = "<span style='color: red'>" + 'Choose a movie' + "</span>";
         innChoose = "";
         document.getElementById("choose").value = "";
     }
@@ -27,7 +27,7 @@ function buyTicket() {
     }
 
     if (isNaN(innAmount) || innAmount === '') {
-        document.getElementById("amountError").innerHTML = "<font color=\"red\">"+'Must be a number, and must be filled'+"</font>";
+        document.getElementById("amountError").innerHTML = "<span style='color: red'>" + 'Plese write the amount of tickets' + "</span>";
         innAmount = "";
         document.getElementById("amount").value = "";
     }
@@ -38,7 +38,7 @@ function buyTicket() {
     }
 
     if (innfName === '' || !isNaN(innfName)) {
-        document.getElementById("fNameError").innerHTML = "<font color=\"red\">"+'Cannot be a number, and must be filled'+"</font>";
+        document.getElementById("fNameError").innerHTML = "<span style='color: red'>" + 'Please enter your firstname' + "</span>";
         innfName = "";
         document.getElementById("fName").value = "";
     }
@@ -49,7 +49,7 @@ function buyTicket() {
     }
 
     if (innlName === '' || !isNaN(innlName)) {
-        document.getElementById("lNameError").innerHTML = "<font color=\"red\">"+'Cannot be a number, and must be filled'+"</font>";
+        document.getElementById("lNameError").innerHTML = "<span style='color: red'>" + 'Please enter your lastname' + "</span>";
         innlName = "";
         document.getElementById("lName").value = "";
     }
@@ -60,7 +60,7 @@ function buyTicket() {
     }
 
     if (innTel === '' || !document.getElementById("tel").value.match(/^[0-9]{4,13}$/)) {
-        document.getElementById("telError").innerHTML = "<font color=\"red\">"+'Please enter a valid phone number'+"</font>";
+        document.getElementById("telError").innerHTML = "<span style='color: red'>" + 'Please enter a valid phone number' + "</span>";
         innTel = "";
         document.getElementById("tel").value = "";
     }
@@ -71,7 +71,7 @@ function buyTicket() {
     }
 
     if (innEmail === '' || !document.getElementById("email").value.match(/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)) {
-        document.getElementById("emailError").innerHTML = "<font color=\"red\">"+'Please enter a valid email'+"</font>";
+        document.getElementById("emailError").innerHTML = "<span style='color: red'>" + 'Please enter a valid email adress' + "</span>";
         innEmail = "";
         document.getElementById("email").value = "";
     }
