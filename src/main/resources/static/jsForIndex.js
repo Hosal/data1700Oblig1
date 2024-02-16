@@ -16,10 +16,10 @@ function buyTicket() {
     let innTel = document.getElementById("tel").value;
     let innEmail = document.getElementById("email").value;
 
-    if (innChoose === 'Choose movie here...') {
-        document.getElementById("chooseError").innerHTML = "<font color=\"red\">"+'Choose a movie'+"</font>";
+    if (innChoose === "") {
+        document.getElementById("chooseError").innerHTML = "<font color=\"red\">" + 'Choose a movie' + "</font>";
         innChoose = "";
-        document.getElementById("choose").innerHTML = '<option style="display:none">Choose movie here...</option><option>Casablanca</option><option>Fort Apache</option><option>Apocolypse Now</option>';
+        document.getElementById("choose").value = "";
     }
     else {
         chooseFilled = true;
@@ -95,7 +95,7 @@ function buyTicket() {
             email : innEmail
         }
         tickets.push(purchasedTicket);
-        document.getElementById("choose").innerHTML = '<option style="display:none">Choose movie here...</option><option>Casablanca</option><option>Fort Apache</option><option>Apocolypse Now</option>';
+        document.getElementById("choose").value = "";
         document.getElementById("amount").value = "";
         document.getElementById("fName").value = "";
         document.getElementById("lName").value = "";
