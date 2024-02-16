@@ -37,7 +37,7 @@ function buyTicket() {
         document.getElementById("amountError").innerHTML = "";
     }
 
-    if (innfName === '' || isNaN(innfName) === false) {
+    if (innfName === '' || !isNaN(innfName)) {
         document.getElementById("fNameError").innerHTML = "<font color=\"red\">"+'Cannot be a number, and must be filled'+"</font>";
         innfName = "";
         document.getElementById("fName").value = "";
@@ -48,7 +48,7 @@ function buyTicket() {
         document.getElementById("fNameError").innerHTML = "";
     }
 
-    if (innlName === '' || isNaN(innlName) === false) {
+    if (innlName === '' || !isNaN(innlName)) {
         document.getElementById("lNameError").innerHTML = "<font color=\"red\">"+'Cannot be a number, and must be filled'+"</font>";
         innlName = "";
         document.getElementById("lName").value = "";
@@ -70,7 +70,7 @@ function buyTicket() {
         document.getElementById("telError").innerHTML = "";
     }
 
-    if (innEmail === '' || isNaN(innEmail) === false) {
+    if (innEmail === '' || !isNaN(innEmail)) {
         document.getElementById("emailError").innerHTML = "<font color=\"red\">"+'Cannot be a number, and must be filled'+"</font>";
         innEmail = "";
         document.getElementById("email").value = "";
