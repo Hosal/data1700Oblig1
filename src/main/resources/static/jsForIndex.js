@@ -59,8 +59,8 @@ function buyTicket() {
         document.getElementById("lNameError").innerHTML = "";
     }
 
-    if (innTel === '' || isNaN(innTel)) {
-        document.getElementById("telError").innerHTML = "<font color=\"red\">"+'Must be a number, and must be filled'+"</font>";
+    if (innTel === '' || !document.getElementById("tel").value.match(/^[0-9]{4,13}$/)) {
+        document.getElementById("telError").innerHTML = "<font color=\"red\">"+'Please enter a valid phone number'+"</font>";
         innTel = "";
         document.getElementById("tel").value = "";
     }
